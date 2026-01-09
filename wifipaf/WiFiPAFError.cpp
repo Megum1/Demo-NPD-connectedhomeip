@@ -100,6 +100,9 @@ bool FormatLayerError(char * buf, uint16_t bufSize, CHIP_ERROR err)
     case WIFIPAF_ERROR_INVALID_PAFTP_SEQUENCE_NUMBER.AsInteger():
         desc = "Received invalid WiFiPAF transport protocol sequence number";
         break;
+    case WIFIPAF_ERROR_REASSEMBLER_INCORRECT_STATE.AsInteger():
+        desc = "WiFiPAF message reassembler encountered incorrect state";
+        break;
     default:
         return false;
     }
